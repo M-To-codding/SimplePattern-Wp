@@ -1,0 +1,14 @@
+@function font-weights($weight) {
+  $weights: (
+          light: 300,
+          regular: 400,
+          bold: 600
+  );
+  @return map_get($weights, $weight);
+}
+
+@mixin font-weight-size($weight, $size:14px) {
+  font-weight: font-weights($weight);
+  font-size: $size;
+}
+

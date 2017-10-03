@@ -1,0 +1,12 @@
+.contacts {
+  background-image: url(assets/public/images/content-rectangle.jpg);
+  background-position: 100% -30%;
+  flex-flow: column;
+  flex-wrap: wrap;
+  text-align: center;
+  .info {
+    margin-top: 75px;
+    @include font-weight-size(regular, 26px);
+    color: $white;
+  }
+}

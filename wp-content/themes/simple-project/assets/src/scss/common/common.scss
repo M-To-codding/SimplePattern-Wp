@@ -1,0 +1,92 @@
+body {
+  background-color: #0e1117;
+}
+
+.body-bg {
+  max-width: 1700px;
+  margin: auto;
+  width: 100%;
+  background-image: url("assets/public/images/header-bg.jpg");
+  background-position: top center, center;
+  //background-size: 101% 100%, 100%;
+  background-attachment: fixed;
+  transition: 0.8s;
+  }
+.content-bg {
+  background-image: url("assets/public/images/content-bg.jpg");
+  transition: 0.6s;
+}
+
+.container {
+  max-width:695px;
+  width: 100%;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: inherit;
+}
+
+.bg-bottom-triangle {
+  width: 100%;
+  height: 456px;
+  background-image: url(assets/public/images/bottom-triangle.png);
+  background-position: 80% 3%;
+  padding-top: 310px;
+}
+
+.heading {
+  color: $accent-yellow;
+  @include font-weight-size(regular, 30px);
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+  &:hover:after {
+    margin-top: 30px;
+    transition: 1s;
+  }
+  &:after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: flex;
+    margin: auto;
+    margin-top: 24px;
+    border-style: solid;
+    border-width: 10px 110px 0 110px;
+    border-color: #fff transparent transparent transparent;
+    transition: 1s;
+  }
+}
+
+.goto {
+  @include font-weight-size(light, 20px);
+  color: $lite-gray;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: $accent-yellow;
+  }
+}
+
+.contact-form {
+  margin: 75px 0 140px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  #email, #message {
+    width: 365px;
+    background: none;
+    border-color: $white;
+    color: $white;
+    padding: 5px;
+    border-width: 2px;
+    &::placeholder {
+      //font-weight: 600;
+      font-size: 17px;
+    }
+  }
+  #message {
+    margin-top: 20px;
+  }
+}
