@@ -54,10 +54,6 @@ get_header(); ?>
 
 	                    <?php while ($the_query -> have_posts()) : $the_query -> the_post();
 
-//                            if ( has_post_thumbnail() ) {
-//                                the_post_thumbnail( 'full' );
-//                            }
-
 							get_template_part( 'template-parts/content-front-page', get_post_format() );
 
 	                    endwhile;

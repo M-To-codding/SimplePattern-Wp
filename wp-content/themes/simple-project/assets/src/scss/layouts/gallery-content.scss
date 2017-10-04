@@ -1,0 +1,26 @@
+.gallery-content{
+  .main-content {
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    justify-content: space-between;
+
+    .post-item {
+      max-width: 500px;
+      overflow: hidden;
+      margin-top: 35px;
+
+      .entry-title {
+        margin: 0 0 10px 0;
+      }
+
+      .entry-content {
+        background-color: #13161d;
+        color: #fff;
+        padding: 20px;
+        margin-top: -4px;
+      }
+    }
+  }
+}
