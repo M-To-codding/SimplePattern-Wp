@@ -6,15 +6,36 @@ function showMenu() {
 }
 
 function addMenuEventListener() {
+    var activeClassName = "active";
+
     var menuContainer = document.querySelector(".items-container"),
         mainMenu = document.querySelector(".main-menu");
 
-    if (menuContainer.classList.contains("active") && mainMenu.classList.contains("active")) {
-        menuContainer.classList.remove("active");
-        mainMenu.classList.remove("active");
+    var items = [menuContainer, mainMenu];
 
+    if (allHasClass(items, activeClassName)) {
+        removeFromAll(items, activeClassName)
     } else {
-        menuContainer.classList.add("active");
-        mainMenu.classList.add("active");
+        addToAll(items, activeClassName)
+    }
+}
+
+function allHasClass(items, className) {
+    for (var i = 0; i < items.length; i++) {
+        if (!items[i].classList.contains(className))
+            return false;
+    }
+    return true;
+}
+
+function removeFromAll(items, className) {
+    for (var i = 0; i < items.length; i++) {
+        items[i].classList.remove(className);
+    }
+}
+
+function addToAll(items, className) {
+    for (var i = 0; i < items.length; i++) {
+        items[i].classList.add(className);
     }
 }
