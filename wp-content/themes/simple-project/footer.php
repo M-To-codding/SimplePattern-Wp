@@ -24,13 +24,14 @@
             consectetur adipisicing elit.
         </p>
 
+        <div id="contacts"></div>
+
         <form action="" class="contact-form">
             <input type="text" id="email" placeholder="Email">
             <textarea name="message" id="message" placeholder="Message" cols="15" rows="4"></textarea>
         </form>
     </div>
 </footer>
-</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

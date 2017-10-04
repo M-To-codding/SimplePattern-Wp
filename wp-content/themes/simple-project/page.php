@@ -20,7 +20,9 @@ get_header(); ?>
 
                 <section class="container about">
                     <h2 class="heading">
-                        Lorem ipsum
+                        <a href="<?php echo get_page_link(48)?>">
+                            Lorem ipsum
+                        </a>
                     </h2>
 
                     <p class="info">
@@ -32,33 +34,45 @@ get_header(); ?>
                     </p>
 
                     <div class="goto">
-                        More
+                        <a href="<?php echo get_page_link(48)?>">More</a>
                     </div>
                 </section>
             </div>
+
             <section class="works">
                 <h2 class="heading">
-                    Lorem ipsum
+                    <a href="<?php echo get_permalink( get_option('page_for_posts')); ?>">
+                        Lorem ipsum
+                    </a>
                 </h2>
-
 
                 <div class="gallery -demo">
                     <div class="container">
-                        <div class="item">
-                            <img src="../../assets/public/images/gallery-item1.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="../../assets/public/images/gallery-item2.jpg" alt="">
-                        </div>
+
+						<?php
+						$the_query = new WP_Query( 'posts_per_page=2' ); ?>
+
+	                    <?php while ($the_query -> have_posts()) : $the_query -> the_post();
+
+//                            if ( has_post_thumbnail() ) {
+//                                the_post_thumbnail( 'full' );
+//                            }
+
+							get_template_part( 'template-parts/content-front-page', get_post_format() );
+
+	                    endwhile;
+	                    wp_reset_postdata();
+	                     ?>
+
                     </div>
 
                     <div class="goto">
-                        More
+                        <a href="<?php echo get_permalink( get_option('page_for_posts')); ?>">More</a>
                     </div>
                 </div>
             </section>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </main><!-- #main -->
+    </div><!-- #primary -->
 
 <?php
 get_footer();
