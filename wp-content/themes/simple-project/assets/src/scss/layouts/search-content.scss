@@ -1,0 +1,25 @@
+.search-container {
+  margin: 120px 0 50px 0;
+
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    margin: 0 auto;
+
+    .page {
+      &-header {
+        width: 100%;
+        text-align: center;
+      }
+      &-title {
+        margin: 40px 0;
+      }
+    }
+
+    .screen-reader-text {
+      display: none;
+    }
+  }
+}
