@@ -1,3 +1,28 @@
+@media screen and (max-width: 1000px) {
+  .gallery-content {
+    .main-content {
+      justify-content: center;
+    }
+  }
+  .sidebar-bg .widget {
+    &-area {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &_recent_entries {
+      margin: 80px 0;
+      width: 90%;
+    }
+  }
+
+  .search-container{
+    .main-content {
+      justify-content: center;
+    }
+  }
+}
+
 @media screen and (max-width: 760px) {
   .main-menu {
     cursor: pointer;
@@ -126,6 +151,14 @@
 
   .contact-form {
     width: 90%;
+  }
+
+  .sidebar-bg {
+    .widget_search {
+      .screen-reader-text {
+        display: none;
+      }
+    }
   }
 
 }
