@@ -33,13 +33,6 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-            <div class="entry-meta">
-				<?php simple_project_posted_on(); ?>
-            </div><!-- .entry-meta -->
-
-			<?php
-		endif;
 		the_content( sprintf(
 			wp_kses(
 			/* translators: %s: Name of current post. Only visible to screen readers */
@@ -61,7 +54,17 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <!--		--><?php //simple_project_entry_footer(); ?>
+        		<?php
+
+		        if ( 'post' === get_post_type() ) : ?>
+                    <div class="entry-meta">
+				        <?php simple_project_posted_on(); ?>
+                    </div><!-- .entry-meta -->
+
+			        <?php
+		        endif;
+
+		        ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
