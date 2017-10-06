@@ -1,6 +1,6 @@
 .sidebar-bg {
   background-image: url(assets/public/images/content-rectangle.jpg);
-  background-size:  100% 100%;
+  background-size: 100% 100%;
 
   .widget {
     &-area {
@@ -12,15 +12,26 @@
       max-width: 1040px;
       padding: 50px 0;
     }
-    &_recent_entries {
+    &_other_works {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
-      width: 30%;
+      width: 50%;
       text-align: center;
       ul {
         width: 100%;
+      }
+      .post-item {
+        width: 170px;
+        margin-top: 0;
+        background: none;
+      }
+    }
+    &_categories {
+      line-height: 30px;
+      .widget-title {
+        margin-bottom: 35px;
       }
     }
     &_search {
@@ -29,6 +40,7 @@
     }
     &-title {
       margin-bottom: 45px;
+      width: 100%;
     }
   }
 }

@@ -162,3 +162,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 @ini_set( 'max_execution_time', '300' );
 
 
+require get_template_directory() . '/inc/custom-widgets/custom_widget_random_posts.php';
+add_action( 'widgets_init', create_function( '', 'register_widget( "Custom_Widget_Random_Posts" );' ) );

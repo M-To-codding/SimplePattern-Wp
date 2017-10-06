@@ -80,11 +80,15 @@ body {
 
 .search-form .search-field {
   background: none;
-  color: #fff; }
+  color: #fff;
+  width: 193px;
+  height: 25px; }
 
 .search-form .search-submit {
   background-color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 65px;
+  height: 25px; }
 
 .search-form .search-field, .search-form .search-submit {
   border-color: #fff;
@@ -283,20 +287,29 @@ input, textarea {
     margin: auto;
     max-width: 1040px;
     padding: 50px 0; }
-  .sidebar-bg .widget_recent_entries {
+  .sidebar-bg .widget_other_works {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    width: 30%;
+    width: 50%;
     text-align: center; }
-    .sidebar-bg .widget_recent_entries ul {
+    .sidebar-bg .widget_other_works ul {
       width: 100%; }
+    .sidebar-bg .widget_other_works .post-item {
+      width: 170px;
+      margin-top: 0;
+      background: none; }
+  .sidebar-bg .widget_categories {
+    line-height: 30px; }
+    .sidebar-bg .widget_categories .widget-title {
+      margin-bottom: 35px; }
   .sidebar-bg .widget_search {
     align-items: center;
     display: flex; }
   .sidebar-bg .widget-title {
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    width: 100%; }
 
 .contacts {
   background-image: url(assets/public/images/content-rectangle.jpg);
@@ -317,9 +330,14 @@ input, textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .sidebar-bg .widget_recent_entries {
+  .sidebar-bg .widget_other_works {
     margin: 80px 0;
-    width: 90%; }
+    width: 90%;
+    justify-content: center; }
+  .sidebar-bg .widget_categories ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
   .search-container .main-content {
     justify-content: center; } }
 
@@ -406,6 +424,12 @@ input, textarea {
     max-width: 400px; }
     .contact-form #message, .contact-form #email {
       width: 96%; } }
+
+@media screen and (max-width: 576px) {
+  .sidebar-bg .widget_other_works {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
 
 @media screen and (max-width: 376px) {
   .logo {

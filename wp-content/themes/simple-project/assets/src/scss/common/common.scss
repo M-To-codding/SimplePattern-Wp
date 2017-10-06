@@ -97,10 +97,14 @@ body {
     &-field {
       background: none;
       color: $white;
+      width: 193px;
+      height: 25px;
     }
     &-submit {
       background-color: $white;
       cursor: pointer;
+      width: 65px;
+      height: 25px;
     }
     &-field, &-submit {
       border-color: $white;

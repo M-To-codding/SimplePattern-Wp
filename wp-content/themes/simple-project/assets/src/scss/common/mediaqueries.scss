@@ -10,9 +10,17 @@
       justify-content: center;
       align-items: center;
     }
-    &_recent_entries {
+    &_other_works {
       margin: 80px 0;
       width: 90%;
+      justify-content: center;
+    }
+    &_categories {
+      ul {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -133,6 +141,14 @@
     #message, #email {
       width: 96%;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar-bg .widget_other_works {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
