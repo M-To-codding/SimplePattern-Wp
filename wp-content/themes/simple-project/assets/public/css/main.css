@@ -94,6 +94,9 @@ body {
   border-color: #fff;
   padding: 3px 10px; }
 
+.updated {
+  display: none; }
+
 * {
   font-family: "Microsoft YaHei", sans-serif;
   background-repeat: no-repeat;
@@ -109,6 +112,9 @@ ul {
   display: inherit;
   width: inherit;
   justify-content: inherit; }
+
+ol {
+  list-style-type: none; }
 
 textarea {
   resize: none; }
@@ -196,25 +202,25 @@ input, textarea {
 .main-content .works .goto {
   margin: 45px 0 67px 0; }
 
-.main-content .gallery.-demo {
+.gallery.-demo, .site-main.-single .comments-container {
   background-image: url(assets/public/images/content-rectangle.jpg);
   background-position: 100%;
   background-size: 180% 100%;
   flex-wrap: wrap;
   margin-top: 21px;
   padding: 40px 0 17px 0; }
-  .main-content .gallery.-demo .item {
+  .gallery.-demo .item, .site-main.-single .comments-container .item {
     max-width: 695px;
     max-height: 310px;
     width: 100%;
     overflow: hidden;
     margin: 22px 0;
     cursor: pointer; }
-    .main-content .gallery.-demo .item img {
+    .gallery.-demo .item img, .site-main.-single .comments-container .item img {
       width: 120%;
       margin-left: -60px;
       transition: 1s; }
-      .main-content .gallery.-demo .item img:hover {
+      .gallery.-demo .item img:hover, .site-main.-single .comments-container .item img:hover {
         width: 140%;
         transition: 1s;
         margin-left: -100px; }
@@ -275,6 +281,95 @@ input, textarea {
       margin: 40px 0; }
     .search-container .main-content .screen-reader-text {
       display: none; }
+
+.site-main.-single {
+  flex-wrap: wrap; }
+  .site-main.-single .container {
+    max-width: 1040px;
+    align-items: center; }
+  .site-main.-single .post-item {
+    display: flex;
+    width: auto;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+    .site-main.-single .post-item .entry-header {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      max-width: 470px;
+      overflow: hidden; }
+    .site-main.-single .post-item .entry-content {
+      padding: 10px 20px; }
+    .site-main.-single .post-item .entry-footer {
+      padding: 50px 20px;
+      color: #fff;
+      max-width: 340px; }
+      .site-main.-single .post-item .entry-footer .entry-meta {
+        margin: 10px 0 0 0; }
+  .site-main.-single .post-navigation {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0; }
+  .site-main.-single .comments-area {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px; }
+    .site-main.-single .comments-area .comment-notes {
+      margin: 20px 0;
+      display: block;
+      font-size: 14px; }
+    .site-main.-single .comments-area .comment-form {
+      max-width: 370px;
+      width: 100%; }
+    .site-main.-single .comments-area .comment-metadata {
+      color: #9E9E9E;
+      font-size: 14px; }
+    .site-main.-single .comments-area .comment-author.vcard .avatar {
+      border: 2px solid white; }
+    .site-main.-single .comments-area .reply {
+      color: #9E9E9E;
+      font-size: 13px;
+      font-weight: 600;
+      justify-content: flex-end;
+      display: flex; }
+    .site-main.-single .comments-area textarea, .site-main.-single .comments-area input {
+      background: none;
+      background-color: rgba(255, 255, 255, 0.11);
+      border: 2px solid #ffffff;
+      color: #fff;
+      width: 270px;
+      height: 80px; }
+    .site-main.-single .comments-area input {
+      height: 20px;
+      margin: 5px 0; }
+    .site-main.-single .comments-area .form-submit input {
+      background: black;
+      padding: 5px 10px;
+      width: 110px;
+      height: 30px; }
+    .site-main.-single .comments-area p {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center; }
+      .site-main.-single .comments-area p label {
+        font-weight: 600;
+        font-size: 16px;
+        color: #a6a8ab; }
+      .site-main.-single .comments-area p.form-submit {
+        justify-content: flex-end; }
+    .site-main.-single .comments-area .comments-title, .site-main.-single .comments-area .says {
+      display: none; }
+    .site-main.-single .comments-area .comment-list {
+      display: flex;
+      flex-direction: column;
+      margin-right: 140px;
+      border-right: 1px solid black;
+      padding: 20px 120px 20px 0; }
+  .site-main.-single .comments-container .comments-area {
+    margin: auto;
+    max-width: 1040px;
+    color: #fff; }
 
 .sidebar-bg {
   background-image: url(assets/public/images/content-rectangle.jpg);
@@ -416,7 +511,7 @@ input, textarea {
   .bg-bottom-triangle {
     padding-top: 180px;
     background-position: 43% 117%; }
-  .main-content .gallery.-demo .item img {
+  .main-content .gallery.-demo .item img, .main-content .site-main.-single .comments-container .item img, .site-main.-single .main-content .comments-container .item img {
     width: 180%;
     margin-left: -140px; }
   .contact-form {
