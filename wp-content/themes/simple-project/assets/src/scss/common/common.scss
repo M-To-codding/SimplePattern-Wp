@@ -71,8 +71,9 @@ body {
 }
 
 .contact-form {
-  margin: 75px 0 140px 0;
   display: flex;
+  margin: 75px 0 140px 0;
+  align-items: center;
   flex-wrap: wrap;
   flex-flow: column;
   #email, #message {
@@ -82,14 +83,26 @@ body {
     color: $white;
     padding: 5px;
     border-width: 2px;
+    background-color: rgba(255, 255, 255, 0.07);
     &::placeholder {
       //font-weight: 600;
       font-size: 17px;
     }
   }
   #message {
-    margin-top: 20px;
+    margin: 20px 0;
   }
+
+}
+
+.send-message {
+  border: 2px solid $white;
+  color: $white;
+  background: black;
+  padding: 5px 10px;
+  width: 110px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .search-form {

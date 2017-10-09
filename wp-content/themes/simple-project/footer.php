@@ -26,9 +26,10 @@
 
         <div id="contacts"></div>
 
-        <form action="" class="contact-form">
-            <input type="text" id="email" placeholder="Email">
-            <textarea name="message" id="message" placeholder="Message" cols="15" rows="4"></textarea>
+        <form action="<?php get_template_directory() . 'inc/email-form-handler.php'?>" method="post" class="contact-form">
+            <input type="text" id="email" name="email" placeholder="Email">
+            <textarea name="message" id="message" name="message" placeholder="Message" cols="15" rows="4"></textarea>
+            <button type="submit" name="submit-button" id="submit-button" class="send-message">Send</button>
         </form>
     </div>
 </footer>

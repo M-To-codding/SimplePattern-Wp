@@ -62,8 +62,9 @@ body {
     color: #fcfc2d; }
 
 .contact-form {
-  margin: 75px 0 140px 0;
   display: flex;
+  margin: 75px 0 140px 0;
+  align-items: center;
   flex-wrap: wrap;
   flex-flow: column; }
   .contact-form #email, .contact-form #message {
@@ -72,11 +73,21 @@ body {
     border-color: #fff;
     color: #fff;
     padding: 5px;
-    border-width: 2px; }
+    border-width: 2px;
+    background-color: rgba(255, 255, 255, 0.07); }
     .contact-form #email::placeholder, .contact-form #message::placeholder {
       font-size: 17px; }
   .contact-form #message {
-    margin-top: 20px; }
+    margin: 20px 0; }
+
+.send-message, .site-main.-single .comments-area .form-submit input.submit {
+  border: 2px solid #fff;
+  color: #fff;
+  background: black;
+  padding: 5px 10px;
+  width: 110px;
+  height: 30px;
+  cursor: pointer; }
 
 .search-form .search-field {
   background: none;
@@ -202,25 +213,25 @@ input, textarea {
 .main-content .works .goto {
   margin: 45px 0 67px 0; }
 
-.gallery.-demo, .site-main.-single .comments-container {
+.gallery.-demo, .site-main.-single .comments-container, .main-content.-about .info-container {
   background-image: url(assets/public/images/content-rectangle.jpg);
   background-position: 100%;
   background-size: 180% 100%;
   flex-wrap: wrap;
   margin-top: 21px;
   padding: 40px 0 17px 0; }
-  .gallery.-demo .item, .site-main.-single .comments-container .item {
+  .gallery.-demo .item, .site-main.-single .comments-container .item, .main-content.-about .info-container .item {
     max-width: 695px;
     max-height: 310px;
     width: 100%;
     overflow: hidden;
     margin: 22px 0;
     cursor: pointer; }
-    .gallery.-demo .item img, .site-main.-single .comments-container .item img {
+    .gallery.-demo .item img, .site-main.-single .comments-container .item img, .main-content.-about .info-container .item img {
       width: 120%;
       margin-left: -60px;
       transition: 1s; }
-      .gallery.-demo .item img:hover, .site-main.-single .comments-container .item img:hover {
+      .gallery.-demo .item img:hover, .site-main.-single .comments-container .item img:hover, .main-content.-about .info-container .item img:hover {
         width: 140%;
         transition: 1s;
         margin-left: -100px; }
@@ -247,7 +258,7 @@ input, textarea {
     color: #fff;
     padding: 20px 20px 0 20px;
     margin-top: -4px;
-    max-height: 58px;
+    max-height: 70px;
     overflow: hidden; }
   .post-item .entry-footer {
     padding: 0 20px 20px 20px; }
@@ -342,11 +353,6 @@ input, textarea {
     .site-main.-single .comments-area input {
       height: 20px;
       margin: 5px 0; }
-    .site-main.-single .comments-area .form-submit input {
-      background: black;
-      padding: 5px 10px;
-      width: 110px;
-      height: 30px; }
     .site-main.-single .comments-area p {
       display: flex;
       justify-content: space-between;
@@ -370,6 +376,34 @@ input, textarea {
     margin: auto;
     max-width: 1040px;
     color: #fff; }
+
+.main-content.-about .info-container .container {
+  justify-content: space-between; }
+
+.main-content.-about .info-container .main-info, .main-content.-about .info-container .secondary-info {
+  width: 70%;
+  margin-bottom: 15px; }
+  .main-content.-about .info-container .main-info .title, .main-content.-about .info-container .secondary-info .title {
+    margin-bottom: 15px;
+    color: #cccbcb; }
+  .main-content.-about .info-container .main-info .text, .main-content.-about .info-container .secondary-info .text {
+    color: #9E9E9E;
+    line-height: 22px; }
+
+.main-content.-about .info-container .secondary-info {
+  width: 45%;
+  margin-top: 20px; }
+
+.main-content.-about .info-container .photo {
+  width: 190px;
+  overflow: hidden;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+  display: flex; }
+
+.main-content.-about .heading {
+  margin-bottom: 14px; }
 
 .sidebar-bg {
   background-image: url(assets/public/images/content-rectangle.jpg);
@@ -408,7 +442,7 @@ input, textarea {
 
 .contacts {
   background-image: url(assets/public/images/content-rectangle.jpg);
-  background-position: 100% -30%;
+  background-position: 100% -24%;
   flex-flow: column;
   flex-wrap: wrap;
   text-align: center; }
@@ -511,7 +545,7 @@ input, textarea {
   .bg-bottom-triangle {
     padding-top: 180px;
     background-position: 43% 117%; }
-  .main-content .gallery.-demo .item img, .main-content .site-main.-single .comments-container .item img, .site-main.-single .main-content .comments-container .item img {
+  .main-content .gallery.-demo .item img, .main-content .site-main.-single .comments-container .item img, .site-main.-single .main-content .comments-container .item img, .main-content.-about .info-container .item img {
     width: 180%;
     margin-left: -140px; }
   .contact-form {
