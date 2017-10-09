@@ -1,0 +1,38 @@
+.main-content.-about {
+  .info-container {
+    @extend .gallery.-demo;
+    .container {
+      justify-content: space-between;
+    }
+
+    .main-info, .secondary-info {
+      width: 70%;
+      margin-bottom: 15px;
+      .title {
+        margin-bottom: 15px;
+        color: #cccbcb;
+      }
+      .text {
+        color: #9E9E9E;
+        line-height: 22px;
+      }
+    }
+    .secondary-info {
+      width: 45%;
+      margin-top: 20px;
+    }
+
+    .photo {
+      width: 190px;
+      overflow: hidden;
+      height: 230px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .heading {
+    margin-bottom: 14px;
+  }
+}
