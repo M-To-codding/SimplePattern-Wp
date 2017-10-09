@@ -21,13 +21,21 @@
     }
 
     .entry-content {
-      padding: 10px 20px;
+      max-height: inherit;
+      .gallery {
+        &-item {
+          margin-top: 5px;
+        }
+      }
     }
 
     .entry-footer {
       padding: 50px 20px;
       color: $white;
       max-width: 340px;
+      > .gallery {
+        display: none;
+      }
 
       .entry-meta {
         margin: 10px 0 0 0;

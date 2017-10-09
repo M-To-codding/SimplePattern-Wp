@@ -1,29 +1,32 @@
 <?php
 /**
  * Template part for displaying single posts
-
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-item' ); ?>>
-	<header class="entry-header">
+    <header class="entry-header">
 		<?php
 
 		if ( has_post_thumbnail() ) :
 			?>
 
-				<img src="<?php the_post_thumbnail_url(); ?>" class="post-image"/>
+            <img src="<?php the_post_thumbnail_url(); ?>" class="post-image"/>
 
 			<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+    </header><!-- .entry-header -->
 
-	<div class="entry-content">
+    <div class="entry-content">
+		<?php
+		if ( get_post_gallery() ) :
+			echo get_post_gallery();
+		endif;
+		?>
+    </div><!-- .entry-content -->
 
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
+    <footer class="entry-footer">
 
 		<?php
 
@@ -47,15 +50,15 @@
 
 
 		if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta">
+            <div class="entry-meta">
 				<?php simple_project_posted_on(); ?>
-			</div><!-- .entry-meta -->
+            </div><!-- .entry-meta -->
 
 			<?php
 		endif;
 
 		?>
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
 
