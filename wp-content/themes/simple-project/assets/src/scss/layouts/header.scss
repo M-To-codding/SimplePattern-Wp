@@ -1,9 +1,24 @@
-//.main-header {
-//  background-image: url(assets/public/images/header-bg.jpg);
-//  background-position: top center;
-//  background-size: 101% 100%;
-//  background-attachment: fixed;
-//}
+.main-header {
+
+  .main-info-container{
+    padding-top: 50px;
+    .container {
+      justify-content: space-between;
+    }
+    .main-info {
+      width: 70%;
+    }
+    .photo {
+      width: 190px;
+      overflow: hidden;
+      height: 230px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+}
 
 .bg-top-triangle {
   width: 100%;

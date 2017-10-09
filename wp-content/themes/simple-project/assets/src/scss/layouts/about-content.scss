@@ -1,34 +1,25 @@
 .main-content.-about {
-  .info-container {
-    @extend .gallery.-demo;
-    .container {
-      justify-content: space-between;
-    }
+  .secondary-info-container {
+    @extend .bg-bottom-triangle;
+    height: auto;
+    padding-top: 260px;
+    padding-bottom: 30px;
+  }
 
-    .main-info, .secondary-info {
-      width: 70%;
+  .container {
+    justify-content: space-between;
+  }
+
+  .secondary-info {
+    width: 45%;
+    margin: 20px 0 15px 0;
+    .title {
       margin-bottom: 15px;
-      .title {
-        margin-bottom: 15px;
-        color: #cccbcb;
-      }
-      .text {
-        color: #9E9E9E;
-        line-height: 22px;
-      }
+      color: #cccbcb;
     }
-    .secondary-info {
-      width: 45%;
-      margin-top: 20px;
-    }
-
-    .photo {
-      width: 190px;
-      overflow: hidden;
-      height: 230px;
-      align-items: center;
-      justify-content: center;
-      display: flex;
+    .text {
+      color: #9E9E9E;
+      line-height: 22px;
     }
   }
 

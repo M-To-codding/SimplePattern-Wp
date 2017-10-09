@@ -62,8 +62,8 @@
 				if ( is_page( 'Main' ) ) {
 					bloginfo( 'description' );
 				} else {
-				    wp_title('');
-                }
+					wp_title( '' );
+				}
 				?>
             </h1>
         </div>
@@ -74,6 +74,35 @@
                     aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'simple-project' ); ?></button>
 
         </nav><!-- #site-navigation -->
+
+		<?php
+		if ( is_page( 'About' ) ):
+			?>
+
+            <section class="main-info-container">
+
+                <div class="container">
+                    <div class="main-info">
+                        <h3 class="title">
+							<?php the_field( 'about-page-heading1' ) ?>
+                        </h3>
+
+                        <p class="text">
+							<?php the_field( 'about-page-info1' ) ?>
+                        </p>
+                    </div>
+
+                    <div class="photo">
+                        <img src="<?php the_field( 'about-photo' ); ?>" alt="">
+                    </div>
+                </div>
+
+            </section>
+
+			<?php
+		endif;
+		?>
+
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
