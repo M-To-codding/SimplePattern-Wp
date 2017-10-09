@@ -323,15 +323,18 @@ input, textarea {
     justify-content: flex-start;
     flex-wrap: wrap; }
     .site-main.-single .post-item .entry-header {
+      max-width: 470px;
+      height: auto;
       align-items: center;
       justify-content: center;
       display: flex;
-      max-width: 470px;
       overflow: hidden; }
     .site-main.-single .post-item .entry-content {
       max-height: inherit; }
-      .site-main.-single .post-item .entry-content .gallery-item {
-        margin-top: 5px; }
+      .site-main.-single .post-item .entry-content .gallery {
+        display: block; }
+        .site-main.-single .post-item .entry-content .gallery-item {
+          margin-top: 5px; }
     .site-main.-single .post-item .entry-footer {
       padding: 50px 20px;
       color: #fff;

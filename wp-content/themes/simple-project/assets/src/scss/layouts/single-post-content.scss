@@ -13,16 +13,18 @@
     flex-wrap: wrap;
 
     .entry-header {
+      max-width: 470px;
+      height: auto;
       align-items: center;
       justify-content: center;
       display: flex;
-      max-width: 470px;
       overflow: hidden;
     }
 
     .entry-content {
       max-height: inherit;
       .gallery {
+        display: block;
         &-item {
           margin-top: 5px;
         }
